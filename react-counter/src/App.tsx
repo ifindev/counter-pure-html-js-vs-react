@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import Button from './components/button';
+import Counter from './components/counter';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="flex items-center justify-center h-screen gap-4 bg-gray-800 text-white font-bold text-xl">
-      <Button onClick={() => setCount((prev) => prev - 1)}>-</Button>
-      <p>{count}</p>
-      <Button onClick={() => setCount((prev) => prev + 1)}>+</Button>
+    <div className="flex items-center justify-center h-screen bg-gray-800">
+      <div className="flex flex-col gap-10">
+        <Counter />
+        <Counter />
+      </div>
     </div>
   );
 }
